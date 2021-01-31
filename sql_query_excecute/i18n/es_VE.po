@@ -1,0 +1,383 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* sql_query_control
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-11-12 14:08+0000\n"
+"PO-Revision-Date: 2019-11-12 14:08+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: sql_query_control
+#: code:addons/sql_query_control/models/models.py:0
+#, python-format
+msgid "%s - successful consultation!"
+msgstr "%s - consulta exitosa!"
+
+#. module: sql_query_control
+#: model:ir.model.fields,field_description:sql_query_control.field_sql_query_control__message_needaction
+msgid "Action Needed"
+msgstr "Acción requerida"
+
+#. module: sql_query_control
+#: model:ir.model.fields,field_description:sql_query_control.field_sql_query_control__activity_ids
+msgid "Activities"
+msgstr "Actividades"
+
+#. module: sql_query_control
+#: model:ir.model.fields,field_description:sql_query_control.field_sql_query_control__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr "Decoración de Actividad  de Excepción"
+
+#. module: sql_query_control
+#: model:ir.model.fields,field_description:sql_query_control.field_sql_query_control__activity_state
+msgid "Activity State"
+msgstr "Estado de la actividad"
+
+#. module: sql_query_control
+#: model:ir.model.fields,field_description:sql_query_control.field_sql_query_control__alias_id
+msgid "Alias"
+msgstr ""
+
+#. module: sql_query_control
+#: model_terms:ir.ui.view,arch_db:sql_query_control.insert_sql_instruction_ac
+msgid ""
+"Are you sure you want to run this query? 'Warning: executed queries may "
+"modify your database."
+msgstr ""
+"¿Seguro que quieres ejecutar esta consulta? Advertencia: las consultas "
+"ejecutadas pueden modificar su base de datos"
+
+#. module: sql_query_control
+#: model:ir.model.fields,field_description:sql_query_control.field_sql_query_control__message_attachment_count
+msgid "Attachment Count"
+msgstr "Conteo de archivos adjuntos"
+
+#. module: sql_query_control
+#: model_terms:ir.actions.act_window,help:sql_query_control.act_insert_sql
+msgid "Create SQL queries."
+msgstr ""
+
+#. module: sql_query_control
+#: model:ir.model.fields,field_description:sql_query_control.field_sql_query_control__create_uid
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: sql_query_control
+#: model:ir.model.fields,field_description:sql_query_control.field_sql_query_control__create_date
+msgid "Created on"
+msgstr "Creado el"
+
+#. module: sql_query_control
+#: model:res.groups,name:sql_query_control.delete_sql_user
+msgid "Delete"
+msgstr ""
+
+#. module: sql_query_control
+#: model:ir.model.fields,field_description:sql_query_control.field_sql_query_control__display_name
+msgid "Display Name"
+msgstr "Mostrar nombre"
+
+#. module: sql_query_control
+#: model:ir.model.fields,help:sql_query_control.field_sql_query_control__html_field
+msgid "Enter an sql statement to execute in the Postgres database"
+msgstr ""
+"Ingrese una instrucción sql para ejecutar en la base de datos de Postgres"
+
+#. module: sql_query_control
+#: model:ir.model.fields,field_description:sql_query_control.field_sql_query_control__message_follower_ids
+msgid "Followers"
+msgstr "Seguidores"
+
+#. module: sql_query_control
+#: model:ir.model.fields,field_description:sql_query_control.field_sql_query_control__message_channel_ids
+msgid "Followers (Channels)"
+msgstr "Seguidores (Canales)"
+
+#. module: sql_query_control
+#: model:ir.model.fields,field_description:sql_query_control.field_sql_query_control__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "Seguidores (Empresas)"
+
+#. module: sql_query_control
+#: model:ir.model.fields,field_description:sql_query_control.field_sql_query_control__id
+msgid "ID"
+msgstr ""
+
+#. module: sql_query_control
+#: model:ir.model.fields,field_description:sql_query_control.field_sql_query_control__activity_exception_icon
+msgid "Icon"
+msgstr "Icono"
+
+#. module: sql_query_control
+#: model:ir.model.fields,help:sql_query_control.field_sql_query_control__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr "Icono para indicar una actividad de excepción."
+
+#. module: sql_query_control
+#: model:ir.model.fields,help:sql_query_control.field_sql_query_control__message_needaction
+#: model:ir.model.fields,help:sql_query_control.field_sql_query_control__message_unread
+msgid "If checked, new messages require your attention."
+msgstr "Si está marcado hay nuevos mensajes que requieren su atención."
+
+#. module: sql_query_control
+#: model:ir.model.fields,help:sql_query_control.field_sql_query_control__message_has_error
+msgid "If checked, some messages have a delivery error."
+msgstr "Si se encuentra marcado, algunos mensajes tienen error de envío."
+
+#. module: sql_query_control
+#: model:res.groups,name:sql_query_control.insert_sql_user
+msgid "Insert"
+msgstr ""
+
+#. module: sql_query_control
+#: code:addons/sql_query_control/models/models.py:0
+#: model:ir.model.fields,help:sql_query_control.field_sql_query_control__alias_id
+#, python-format
+msgid ""
+"Internal email associated with this project. Incoming emails are "
+"automatically synchronized with Tasks (or optionally Issues if the Issue "
+"Tracker module is installed)."
+msgstr ""
+"Correo electrónico interno asociado a este proyecto. Los correos "
+"electrónicos entrantes se sincronizan automáticamente con Tareas (u "
+"opcionalmente Problemas si está instalado el módulo Issue Tracker)."
+
+#. module: sql_query_control
+#: model:ir.model.fields,field_description:sql_query_control.field_sql_query_control__message_is_follower
+msgid "Is Follower"
+msgstr "Es un seguidor"
+
+#. module: sql_query_control
+#: model:ir.model.fields,field_description:sql_query_control.field_sql_query_control____last_update
+msgid "Last Modified on"
+msgstr "Modificada por última vez"
+
+#. module: sql_query_control
+#: model:ir.model.fields,field_description:sql_query_control.field_sql_query_control__write_uid
+msgid "Last Updated by"
+msgstr "Última actualización realizada por"
+
+#. module: sql_query_control
+#: model:ir.model.fields,field_description:sql_query_control.field_sql_query_control__write_date
+msgid "Last Updated on"
+msgstr "Ultima actualizacion en"
+
+#. module: sql_query_control
+#: model:ir.model.fields,field_description:sql_query_control.field_sql_query_control__message_main_attachment_id
+msgid "Main Attachment"
+msgstr "Adjuntos principales"
+
+#. module: sql_query_control
+#: model:ir.model.fields,field_description:sql_query_control.field_sql_query_control__message_has_error
+msgid "Message Delivery error"
+msgstr "Error de Envío de Mensaje"
+
+#. module: sql_query_control
+#: model:ir.model.fields,field_description:sql_query_control.field_sql_query_control__message_ids
+msgid "Messages"
+msgstr "Mensajes"
+
+#. module: sql_query_control
+#: model:ir.actions.act_window,name:sql_query_control.act_insert_sql
+msgid "New Query"
+msgstr "Nueva consulta"
+
+#. module: sql_query_control
+#: model:ir.model.fields,field_description:sql_query_control.field_sql_query_control__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "Siguiente plazo de actividad"
+
+#. module: sql_query_control
+#: model:ir.model.fields,field_description:sql_query_control.field_sql_query_control__activity_summary
+msgid "Next Activity Summary"
+msgstr "Resumen de la siguiente actividad"
+
+#. module: sql_query_control
+#: model:ir.model.fields,field_description:sql_query_control.field_sql_query_control__activity_type_id
+msgid "Next Activity Type"
+msgstr "Siguiente tipo de actividad"
+
+#. module: sql_query_control
+#: model:ir.model.fields,field_description:sql_query_control.field_sql_query_control__message_needaction_counter
+msgid "Number of Actions"
+msgstr "Número de acciones"
+
+#. module: sql_query_control
+#: model:ir.model.fields,field_description:sql_query_control.field_sql_query_control__message_has_error_counter
+msgid "Number of errors"
+msgstr "Numero de errores"
+
+#. module: sql_query_control
+#: model:ir.model.fields,help:sql_query_control.field_sql_query_control__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr "Número de mensajes que requieren una acción"
+
+#. module: sql_query_control
+#: model:ir.model.fields,help:sql_query_control.field_sql_query_control__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "Número de mensajes con error de envío"
+
+#. module: sql_query_control
+#: model:ir.model.fields,help:sql_query_control.field_sql_query_control__message_unread_counter
+msgid "Number of unread messages"
+msgstr "Número de mensajes no leidos"
+
+#. module: sql_query_control
+#: model:ir.ui.menu,name:sql_query_control.inser_sql_view
+msgid "Queries"
+msgstr "Consultas"
+
+#. module: sql_query_control
+#: model:res.groups,name:sql_query_control.read_sql_user
+msgid "Read only"
+msgstr "Solo lectura"
+
+#. module: sql_query_control
+#: model:ir.model.fields,field_description:sql_query_control.field_sql_query_control__activity_user_id
+msgid "Responsible User"
+msgstr "Usuario responsable"
+
+#. module: sql_query_control
+#: model_terms:ir.ui.view,arch_db:sql_query_control.insert_sql_instruction_ac
+msgid "Result"
+msgstr "Resultado"
+
+#. module: sql_query_control
+#: model_terms:ir.ui.view,arch_db:sql_query_control.insert_sql_instruction_ac
+msgid "Run Query"
+msgstr "Ejecutar consulta"
+
+#. module: sql_query_control
+#: model:ir.model.fields,field_description:sql_query_control.field_sql_query_control__sql_instruction
+msgid "SQL Instruction"
+msgstr "Instrucción SQL"
+
+#. module: sql_query_control
+#: model:ir.module.category,name:sql_query_control.insert_sql_category
+#: model:ir.ui.menu,name:sql_query_control.insert_menu_sql
+msgid "SQL Query Control"
+msgstr ""
+
+#. module: sql_query_control
+#: model:res.groups,name:sql_query_control.select_sql_user
+msgid "Select"
+msgstr ""
+
+#. module: sql_query_control
+#: model:ir.model.fields,help:sql_query_control.field_sql_query_control__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+"Estado basado en actividades\n"
+"Vencida: la fecha tope ya ha pasado\n"
+"Hoy: La fecha tope es hoy\n"
+"Planificada: futuras actividades."
+
+#. module: sql_query_control
+#: model:ir.model.fields,help:sql_query_control.field_sql_query_control__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr "Tipo de actividad de excepción registrada."
+
+#. module: sql_query_control
+#: model:ir.model.fields,field_description:sql_query_control.field_sql_query_control__message_unread
+msgid "Unread Messages"
+msgstr "Mensajes sin leer"
+
+#. module: sql_query_control
+#: model:ir.model.fields,field_description:sql_query_control.field_sql_query_control__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr "Contador de mensajes sin leer"
+
+#. module: sql_query_control
+#: model:res.groups,name:sql_query_control.update_sql_user
+msgid "Update"
+msgstr ""
+
+#. module: sql_query_control
+#: code:addons/sql_query_control/models/models.py:0
+#, python-format
+msgid ""
+"You do not have permission for the delete command, contact the "
+"administrator."
+msgstr ""
+"No tiene permiso para el comando Eliminar, póngase en contacto con el "
+"administrador."
+
+#. module: sql_query_control
+#: code:addons/sql_query_control/models/models.py:0
+#, python-format
+msgid ""
+"You do not have permission for the insert command, contact the "
+"administrator."
+msgstr ""
+"No tiene permiso para el comando insert, póngase en contacto con el "
+"administrador."
+
+#. module: sql_query_control
+#: code:addons/sql_query_control/models/models.py:0
+#, python-format
+msgid ""
+"You do not have permission for the replace command, contact the "
+"administrator."
+msgstr ""
+"No tiene permiso para el comando replace, póngase en contacto con el "
+"administrador."
+
+#. module: sql_query_control
+#: code:addons/sql_query_control/models/models.py:0
+#, python-format
+msgid ""
+"You do not have permission for the select command, contact the "
+"administrator."
+msgstr ""
+"No tiene permiso para el comando select, póngase en contacto con el "
+"administrador."
+
+#. module: sql_query_control
+#: code:addons/sql_query_control/models/models.py:0
+#, python-format
+msgid ""
+"You do not have permission for the truncate command, contact the "
+"administrator."
+msgstr ""
+"No tiene permiso para el comando truncate, póngase en contacto con el "
+"administrador."
+
+#. module: sql_query_control
+#: code:addons/sql_query_control/models/models.py:0
+#, python-format
+msgid ""
+"You do not have permission for the update command, contact the "
+"administrator."
+msgstr ""
+"No tiene permiso para el comando update, póngase en contacto con el "
+"administrador."
+
+#. module: sql_query_control
+#: model_terms:ir.actions.act_window,help:sql_query_control.act_insert_sql
+msgid ""
+"You have not executed any queries yet. The SQL instructions you execute will"
+" be displayed here.<br>"
+msgstr ""
+"Aún no ha ejecutado ninguna consulta. Las instrucciones SQL que ejecutes se mostrarán aquí.<br>"
+
+#. module: sql_query_control
+#: model:ir.model.fields,field_description:sql_query_control.field_sql_query_control__html_field
+msgid "sql result"
+msgstr "resultado sql"
+
+#. module: sql_query_control
+#: model:ir.model,name:sql_query_control.model_sql_query_control
+msgid "sql.query.control"
+msgstr ""

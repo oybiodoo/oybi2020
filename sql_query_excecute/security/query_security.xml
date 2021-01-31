@@ -1,0 +1,36 @@
+<?xml version="1.0" ?>
+<odoo>
+  <record id="insert_sql_category" model="ir.module.category">
+    <field name="name">SQL Query Control</field>
+  </record>
+
+  <record id="read_sql_user" model="res.groups">
+    <field name="name">Read only</field>
+    <field name="category_id" ref="insert_sql_category"/>
+  </record>
+
+  <record id="select_sql_user" model="res.groups">
+    <field name="name">Select</field>
+    <field name="category_id" ref="insert_sql_category"/>
+    <field name="users" eval="[(4, ref('base.user_root')), (4, ref('base.user_admin'))]"/>
+  </record>
+
+  <record id="insert_sql_user" model="res.groups">
+    <field name="name">Insert</field>
+    <field name="category_id" ref="insert_sql_category"/>
+    <field name="users" eval="[(4, ref('base.user_root')), (4, ref('base.user_admin'))]"/>
+  </record>
+
+  <record id="update_sql_user" model="res.groups">
+    <field name="name">Update</field>
+    <field name="category_id" ref="insert_sql_category"/>
+    <field name="users" eval="[(4, ref('base.user_root')), (4, ref('base.user_admin'))]"/>
+  </record>
+
+  <record id="delete_sql_user" model="res.groups">
+    <field name="name">Delete</field>
+    <field name="category_id" ref="insert_sql_category"/>
+    <field name="users" eval="[(4, ref('base.user_root')), (4, ref('base.user_admin'))]"/>
+  </record>
+
+</odoo>

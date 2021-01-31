@@ -1,0 +1,8 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_sql_query_view_read,User read sql,model_sql_query_control,read_sql_user,1,0,0,0
+access_sql_query_view_select,User insert sql,model_sql_query_control,select_sql_user,1,1,1,0
+access_sql_query_view_insert,User insert sql,model_sql_query_control,insert_sql_user,1,1,1,0
+access_sql_query_view_update,User update sql,model_sql_query_control,update_sql_user,1,1,1,0
+access_sql_query_view_delete,User delete sql,model_sql_query_control,delete_sql_user,1,1,1,0
+access_mail_aliasyyy,mail.alias,mail.model_mail_alias,base.group_system,1,1,1,1
+access_mail_activity_type_hhh_manager,mail.activity.type.project.manager,mail.model_mail_activity_type,base.group_system,1,1,1,1

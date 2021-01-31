@@ -1,0 +1,64 @@
+<?xml version="1.0"?>
+<odoo>
+  <record model="ir.ui.view" id="insert_sql_instruction_ab">
+    <field name="name">resolved queries tree</field>
+    <field name="model">sql.query.control</field>
+    <field name="arch" type="xml">
+      <tree >
+        <field name="sql_instruction"/>
+      </tree>
+    </field>
+  </record>
+
+  <record model="ir.ui.view" id="insert_sql_instruction_ac">
+    <field name="name">Insert sql queries</field>
+    <field name="model">sql.query.control</field>
+    <field name="arch" type="xml">
+        <form>
+          <header>
+
+               <button
+                      name="capture_sql_field"
+                      confirm="Are you sure you want to run this query? 'Warning: executed queries may modify your database."
+                      string="Run Query" type="object"/>
+        </header>
+        <sheet>
+
+          <group>
+              <field name="sql_instruction"/>
+              <field name="msg"/>
+          </group>
+          <separator string="Result"  style="text-align:center"/>
+          <field name="html_field"/>
+
+          </sheet>
+          <div class="oe_chatter">
+              <field name="message_follower_ids" widget="mail_followers"/>
+              <field name="activity_ids" widget="mail_activity"/>
+              <field name="message_ids" widget="mail_thread"/>
+          </div>
+      </form>
+    </field>
+  </record>
+
+  <record id="act_insert_sql" model="ir.actions.act_window">
+      <field name="name">Sales Orders</field>
+      <field name="type">ir.actions.act_window</field>
+      <field name="res_model">sql.query.control</field>
+      <field name="view_mode">tree,form</field>
+      <field name="help" type="html">
+          <p class="o_view_nocontent_smiling_face">
+               Create SQL queries.
+          </p><p>
+               You have not executed any queries yet. The SQL instructions you execute will be displayed here.<br/>
+          </p>
+      </field>
+  </record>
+
+  <menuitem id="insert_menu_sql" name="SQL Query Control"/>
+
+  <act_window id="act_insert_sql" name="New Query" res_model="sql.query.control" view_mode="tree,form"/>
+
+  <menuitem id="inser_sql_view" name="Queries" action="act_insert_sql" parent="insert_menu_sql"/>
+
+</odoo>
