@@ -12,6 +12,8 @@ class HrLeaveInherit(models.Model):
 
             if allocation.type_request_unit == 'day':
                 rec.remaining = str(int(allocation.max_leaves - allocation.leaves_taken)) + ' days'
+            elif allocation.type_request_unit == 'half_day':
+                rec.remaining = str(int(allocation.max_leaves - allocation.leaves_taken)) + ' days'
             elif allocation.type_request_unit == 'hour':
                 rec.remaining = str(int(allocation.max_leaves - allocation.leaves_taken)) + ' hours'
             else:
