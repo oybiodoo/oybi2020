@@ -1,0 +1,218 @@
+// ======================= Variables ====================================================================================
+// --------------------- Theme colors ----------------------------------------------------------------------------------
+$o-ks-alpha: #00A09D;
+$o-ks-beta: #875A7B;
+$o-ks-gamma: #5C5B80;
+$o-ks-delta: #5B899E;
+$o-ks-epsilon: #E46F78;
+// --------------------- Transparent colors ----------------------------------------------------------------------------
+$o-ks-bg-black-25: rgba(0, 0, 0, 0.25);
+$o-ks-bg-black-50: rgba(0, 0, 0, 0.50);
+$o-ks-bg-black-75: rgba(0, 0, 0, 0.75);
+$o-ks-bg-white-25: rgba(255, 255, 255, 0.25);
+$o-ks-bg-white-50: rgba(255, 255, 255, 0.50);
+$o-ks-bg-white-75: rgba(255, 255, 255, 0.75);
+// --------------------- Simple colors ---------------------------------------------------------------------------------
+$o-ks-white: #ffffff;
+$o-ks-black: #212529;
+$o-ks-ligth-grey: #f5f5f5;
+$o-ks-semi-white: #e5e5e5;
+// --------------------- Fonts-------- ---------------------------------------------------------------------------------
+$o-ks-def-font: -apple-system, "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+$o-ks-code-font: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+// --------------------- Borders ---------------------------------------------------------------------------------------
+$o-ks-def-b-radius: 2px;
+$o-ks-def-b-radius-big: 10px;
+// --------------------- Sizes -----------------------------------------------------------------------------------------
+$o-ks-def-body-width: 1600px;
+// ======================= Classes =====================================================================================
+// --------------------- Backround classes -----------------------------------------------------------------------------
+.bg-alpha {
+    background-color: $o-ks-alpha;
+    color: $o-ks-white;
+}
+.bg-beta {
+    background-color: $o-ks-beta;
+    color: $o-ks-white;
+}
+.bg-gamma {
+    background-color: $o-ks-gamma;
+    color: $o-ks-white;
+}
+.bg-delta {
+    background-color: $o-ks-delta;
+    color: $o-ks-white;
+}
+.bg-epsilon {
+    background-color: $o-ks-epsilon;
+    color: $o-ks-white;
+}
+.bg-black-25 {
+    background-color: $o-ks-bg-black-25;
+    color: $o-ks-black;
+}
+.bg-black-50 {
+    background-color: $o-ks-bg-black-50;
+    color: $o-ks-white;
+}
+.bg-black-75 {
+    background-color: $o-ks-bg-black-75;
+    color: $o-ks-white;
+}
+.bg-gray-lighter {
+    background-color: $o-ks-ligth-grey;
+}
+// --------------------- Font Classes ----------------------------------------------------------------------------------
+.text-alpha {color: $o-ks-alpha;}
+.text-beta {color: $o-ks-beta;}
+.text-gamma {color: $o-ks-gamma;}
+.text-delta {color: $o-ks-delta;}
+.text-epsilon {color: $o-ks-epsilon;}
+.text-center {text-align:center;}
+.text-right {text-align:right;}
+// --------------------- Header Classes --------------------------------------------------------------------------------
+p, span, h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+    color: inherit;
+    font-family: $o-ks-def-font; 
+}
+ol, ul {
+  padding-left: 40px;
+}
+// --------------------- Table and Padding Classes ---------------------------------------------------------------------
+// table and padding classes
+td {
+    text-align: inherit;
+    page-break-inside: auto;
+}
+tr {
+    page-break-inside: auto;
+}
+td[class*="mb"], td[class*="mt"] {margin: 0!important;}
+.knowsystem_h_padding {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.knowsystem_v_padding {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.knowsystem_v_padding_small {
+    padding-top: 8px;
+    padding-bottom: 8px;    
+}
+.knowsystem_no_margin {margin: 0;}
+.knowsystem_table_styles {
+    width: 100%;
+    border-collapse: separate;
+    border: none;
+}
+.mt16 {margin-top: 16px;}
+.vert_mid {vertical-align:middle;}
+// ======================= Snippet core=================================================================================
+.knowsystem_snippet_general {
+    width: 100%;
+    margin: 0 auto;
+    td, th {
+        vertical-align: top;
+        border: none;
+    }
+    tr {
+        vertical-align: top;
+        border: none;
+    }
+    img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+    }
+    a, {
+        color: $o-ks-gamma;
+        text-decoration: underline;
+        &:hover {cursor: pointer;}
+        &:focus, &:active {text-decoration: none;}
+    }
+    .separator {
+        width: 100%;
+        height: 2px;
+        background-color: darken($o-ks-white, 15%);
+    }
+    .separator_big {
+        margin-left: 10%;
+        margin-right: 10%;
+        height: 2px; 
+        width: 80%;  
+        background-color: darken($o-ks-white, 15%);
+    }
+}
+
+// ======================= SNIPPETS ====================================================================================
+// --------------------- COMPARISONS -----------------------------------------------------------------------------------
+.knowsystem_block_comparison_table {
+    table table 
+    {
+        td, th {
+            vertical-align: middle;
+        }
+        td {
+            padding: 10px 20px;
+            * {
+                margin: 0;
+                line-height: 1.3;
+            }
+        }
+    }
+}
+// --------------------- 2 & 3 columns----------------------------------------------------------------------------------
+.knowsystem_two_cols, .knowsystem_three_cols {
+    &, p {font-size: small;}
+    .knowsystem_col_container {
+        padding: 10px 20px;
+        h4 {margin-top: 15px;}
+    }
+}
+// --------------------- CARD ------------------------------------------------------------------------------------------
+.knowsystem-bordered {
+    border: 1px solid $o-ks-semi-white;
+    border-radius: $o-ks-def-b-radius;
+}
+// --------------------- ALERT -----------------------------------------------------------------------------------------
+.knowsystem-alert {
+    border-radius: $o-ks-def-b-radius-big;
+    vertical-align: top;
+    span {
+        font-size: 24px;
+        padding-left: 10px;
+    }
+}
+// --------------------- CODE ------------------------------------------------------------------------------------------
+.knowsystem-code {
+    font-family: $o-ks-code-font;
+    color: $o-ks-white;
+}
+// --------------------- IMAGE + TEXT ----------------------------------------------------------------------------------
+.knowsystem_block_image_text, .knowsystem_block_text_image {
+    &, p {font-size: small;}
+}
+
+// ======================= GENERIC LAYOUT ==============================================================================
+.note-editable .o_layout {
+    overflow: hidden;
+    box-sizing: content-box;
+    width: 94%;
+    min-height: 100%;
+    background-color: $o-ks-white;
+    padding: 0 0%;
+
+    &, p {font-size: 14px;}
+    &, p, h1, h2, h3, h4, h5, h6 {font-family: $o-ks-def-font;}
+    > .o_knowsystem_wrapper {
+        width: 100%;
+        margin: 24px 0;
+        border-collapse: separate;
+        .o_knowsystem_wrapper_td {
+            width: $o-ks-def-body-width;
+            border: 1px solid darken($o-ks-ligth-grey, 2%);
+            background-color: $o-ks-white;
+        }
+    }
+}

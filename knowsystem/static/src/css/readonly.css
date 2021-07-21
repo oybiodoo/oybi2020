@@ -1,0 +1,6 @@
+#wrapwrap .o_layout.o_basic_theme {font-family: -apple-system, "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;}
+html, body, #wrapwrap {
+    width: 100%;
+    height: 100%;
+    overflow: auto !important;
+}

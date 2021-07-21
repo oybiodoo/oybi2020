@@ -1,0 +1,623 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Snippets & Themes Menu -->
+    <template id="knowsystem_snippets"
+              inherit_id="web_editor.snippets"
+              primary="True"
+              groups="base.group_user"
+    >
+        <xpath expr="//div[@id='o_scroll']" position="replace">
+            <div id="o_scroll">
+                <div id="snippet_structure" class="o_panel">
+                    <div class="o_panel_header">
+                        <i class="fa fa-paragraph"/> Texts
+                    </div>
+                    <div class="o_panel_body">
+                        <t t-snippet="knowsystem.knowsystem_block_title_text" t-thumbnail="/knowsystem/static/src/img/blocks/title_text.png"/>
+                        <t t-snippet="knowsystem.knowsystem_block_text" t-thumbnail="/knowsystem/static/src/img/blocks/paragraph.png"/>
+                        <t t-snippet="knowsystem.knowsystem_block_tilte_subtitle" t-thumbnail="/knowsystem/static/src/img/blocks/title_subtitle.png"/>
+                        <t t-snippet="knowsystem.knowsystem_comparison" t-thumbnail="/knowsystem/static/src/img/blocks/comparison.png"/>
+                        <t t-snippet="knowsystem.knowsystem_2_columns_text" t-thumbnail="/knowsystem/static/src/img/blocks/2_columns_text.png"/>
+                        <t t-snippet="knowsystem.knowsystem_3_columns_text" t-thumbnail="/knowsystem/static/src/img/blocks/3_columns_text.png"/>
+                    </div>
+                    <div class="o_panel_header">
+                        <i class="fa fa-plus"/> Special
+                    </div>
+                    <div class="o_panel_body">
+                        <t t-snippet="knowsystem.knowsystem_card" t-thumbnail="/knowsystem/static/src/img/blocks/card.png"/>
+                        <t t-snippet="knowsystem.knowsystem_alert" t-thumbnail="/knowsystem/static/src/img/blocks/alert.png"/>
+                        <t t-snippet="knowsystem.knowsystem_code" t-thumbnail="/knowsystem/static/src/img/blocks/code.png"/>
+                        <t t-snippet="knowsystem.knowsystem_recommendations" t-thumbnail="/knowsystem/static/src/img/blocks/recommend.png"/>
+                        <t t-snippet="knowsystem.knowsystem_separator" t-thumbnail="/knowsystem/static/src/img/blocks/separator.png"/>
+                        <t t-snippet="knowsystem.knowsystem_tag_line" t-thumbnail="/knowsystem/static/src/img/blocks/tag_line.png"/>
+                        <t t-snippet="knowsystem.knowsystem_steps"  t-thumbnail="/knowsystem/static/src/img/blocks/steps.png"/>
+                        <t t-snippet="knowsystem.knowsystem_footer" t-thumbnail="/knowsystem/static/src/img/blocks/footer.png"/>
+                    </div>
+                    <div class="o_panel_header">
+                        <i class="fa fa-photo"/> Images
+                    </div>
+                    <div class="o_panel_body">
+                        <t t-snippet="knowsystem.knowsystem_2_columns" t-thumbnail="/knowsystem/static/src/img/blocks/2_columns.png"/>
+                        <t t-snippet="knowsystem.knowsystem_3_columns" t-thumbnail="/knowsystem/static/src/img/blocks/3_columns.png"/>
+                        <t t-snippet="knowsystem.knowsystem_image_text" t-thumbnail="/knowsystem/static/src/img/blocks/image_text.png"/>
+                        <t t-snippet="knowsystem.knowsystem_text_image" t-thumbnail="/knowsystem/static/src/img/blocks/text_image.png"/>
+                        <t t-snippet="knowsystem.knowsystem_image" t-thumbnail="/knowsystem/static/src/img/blocks/image.png"/>
+                        <t t-snippet="knowsystem.knowsystem_image_banner" t-thumbnail="/knowsystem/static/src/img/blocks/banner.png"/>
+                    </div>
+                </div>
+            </div>
+        </xpath>
+        <xpath expr="//div[@id='snippet_options']" position="inside">
+            <t t-call="knowsystem.snippet_options"/>
+        </xpath>
+    </template>
+
+    <!-- Texts -->
+    <template id="knowsystem_block_title_text" name="Title + Text">
+        <div class="knowsystem_block_title_text">
+            <div class="knowsystem_snippet_general">
+                <table align="center" cellspacing="0" cellpadding="0" border="0" class="knowsystem_table_styles">
+                    <tbody>
+                        <tr>
+                            <td class="knowsystem_h_padding knowsystem_v_padding">
+                                <h2 class="knowsystem_no_margin"><span>Title</span></h2>
+                                <p>point 1</p>
+                                <p>point 2</p>
+                                <p>point 3</p>
+                            </td>
+                        </tr>
+                        <tr/>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </template>
+
+    <template id="knowsystem_block_text" name="Text">
+        <div class="knowsystem_block_paragraph">
+            <div class="knowsystem_snippet_general">
+                <table align="center" cellspacing="0" cellpadding="0" border="0" class="knowsystem_table_styles">
+                    <tbody>
+                        <tr>
+                            <td class="knowsystem_h_padding knowsystem_v_padding">
+                                <p>point 1</p>
+                                <p>point 2</p>
+                                <p>point 3</p>
+                            </td>
+                        </tr>
+                        <tr/>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </template>
+
+    <template id="knowsystem_block_tilte_subtitle" name="Title + Subtitle">
+        <div class="knowsystem_block_title_sub">
+            <div class="knowsystem_snippet_general">
+                <table align="center" cellspacing="0" cellpadding="0" class="knowsystem_table_styles">
+                    <tbody>
+                        <tr>
+                            <td class="knowsystem_h_padding knowsystem_v_padding">
+                                <h2 class="knowsystem_no_margin">Title</h2>
+                                <p class="knowsystem_no_margin">Subtitle</p>
+                            </td>
+                        </tr>
+                        <tr/>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </template>
+
+    <template id="knowsystem_comparison" name="Comparisons">
+        <div class="knowsystem_block_comparison_table">
+            <div class="knowsystem_snippet_general">
+                <table align="center" cellspacing="0" cellpadding="0" class="knowsystem_table_styles">
+                    <tbody>
+                        <tr>
+                            <td class="knowsystem_h_padding knowsystem_v_padding">
+                                <table cellspacing="0" cellpadding="0" class="knowsystem_table_styles">
+                                    <tbody>
+                                        <tr>
+                                            <th class="bg-gamma knowsystem_v_padding">
+                                                <h2 class="text-center knowsystem_no_margin">Option 1</h2>
+                                            </th>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center bg-gray-lighter">
+                                                <p class="knowsystem_display_coupon text-center" style="margin-top:10px;">
+                                                    Key point
+                                                </p>
+                                                <small>comment</small>
+                                            </td>
+                                        </tr>
+                                        <tr><td class="o_knowsystem_col_mv"><p>point 1</p></td></tr>
+                                        <tr><td class="o_knowsystem_col_mv"><p>point 2</p></td></tr>
+                                        <tr><td class="o_knowsystem_col_mv"><p>point 3</p></td></tr>
+                                        <tr><td class="o_knowsystem_col_mv"><p>point 4</p></td></tr>
+                                        <tr>
+                                            <td valign="top" class="bg-gamma knowsystem_v_padding">
+                                                <div class="separator"></div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td valign="top"
+                                                class="bg-gamma text-center knowsystem_h_padding"
+                                                style="padding-bottom: 20px;"
+                                            >
+                                                <p>footer</p>
+                                            </td>
+                                        </tr>
+                                        <tr/>
+                                    </tbody>
+                                </table>
+                            </td>
+                            <td class="knowsystem_h_padding knowsystem_v_padding">
+                                <table cellspacing="0" cellpadding="0" class="knowsystem_table_styles">
+                                    <tbody>
+                                        <tr>
+                                            <th class="bg-gamma knowsystem_v_padding">
+                                                <h2 class="text-center knowsystem_no_margin">Option 2</h2>
+                                            </th>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center bg-gray-lighter">
+                                                <p class="knowsystem_display_coupon text-center" style="margin-top:10px;">Key point</p>
+                                                <small>comment</small>
+                                            </td>
+                                        </tr>
+                                        <tr><td class="o_knowsystem_col_mv"><p>point 1</p></td></tr>
+                                        <tr><td class="o_knowsystem_col_mv"><p>point 2</p></td></tr>
+                                        <tr><td class="o_knowsystem_col_mv"><p>point 3</p></td></tr>
+                                        <tr><td class="o_knowsystem_col_mv"><p>point 4</p></td></tr>
+                                        <tr>
+                                            <td valign="top" class="knowsystem_v_padding bg-gamma">
+                                                <div class="separator"></div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td valign="top"
+                                                class="text-center knowsystem_h_padding bg-gamma"
+                                                style="padding-bottom: 20px;"
+                                            >
+                                                <p>footer</p>
+                                            </td>
+                                        </tr>
+                                        <tr/>
+                                    </tbody>
+                                </table>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </template>
+
+    <template id="knowsystem_2_columns_text" name="Two Columns">
+        <div class="knowsystem_two_cols">
+            <div class="knowsystem_snippet_general">
+                <table align="center" cellspacing="0" cellpadding="0" class="knowsystem_table_styles knowsystem_col_table">
+                    <tbody>
+                        <tr>
+                            <td class="o_knowsystem_col_mv knowsystem_col_container">
+                                <div>
+                                    <h4 class="text-center">Column 1</h4>
+                                    <p class="text-center knowsystem_no_margin">Text 1</p>
+                                    <div class="text-center mt16">
+                                        <strong>To highlight</strong>
+                                    </div>
+                                </div>
+                            </td>
+
+                            <td class="o_knowsystem_col_mv knowsystem_col_container">
+                                <div>
+                                    <h4 class="text-center">Column 2</h4>
+                                    <p class="text-center knowsystem_no_margin">Text 2</p>
+                                    <div class="text-center mt16">
+                                        <strong>To highlight</strong>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr/>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </template>
+
+    <template id="knowsystem_3_columns_text" name="Three Columns">
+        <div class="knowsystem_three_cols">
+            <div class="knowsystem_snippet_general">
+                <table align="center" cellspacing="0" cellpadding="0" class="knowsystem_table_styles knowsystem_col_table">
+                    <tbody>
+                        <tr>
+                            <td class="o_knowsystem_col_mv knowsystem_col_container">
+                                <div>
+                                    <h4 class="text-center">Column 1</h4>
+                                    <p class="text-center knowsystem_no_margin">Text 1</p>
+                                    <div class="text-center mt16">
+                                        <strong>To highlight</strong>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="o_knowsystem_col_mv knowsystem_col_container">
+                                <div>
+                                    <h4 class="text-center">Column 2</h4>
+                                    <p class="text-center knowsystem_no_margin">Text 2</p>
+                                    <div class="text-center mt16">
+                                        <strong>To highlight</strong>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="o_knowsystem_col_mv knowsystem_col_container">
+                                <div>
+                                    <h4 class="text-center">Column 3</h4>
+                                    <p class="text-center knowsystem_no_margin">Text 3</p>
+                                    <div class="text-center mt16">
+                                        <strong>To highlight</strong>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr/>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </template>
+
+    <!-- Special -->
+    <template id="knowsystem_card" name="Card">
+        <div class="knowsystem_block_card">
+            <div class="knowsystem_snippet_general">
+                <table align="center" cellspacing="0" cellpadding="0" border="0" class="knowsystem_table_styles">
+                    <tbody>
+                        <tr>
+                            <td class="knowsystem_h_padding knowsystem_v_padding o_knowsystem_no_options">
+                                <table cellspacing="0" cellpadding="0" class="knowsystem_table_styles knowsystem-bordered">
+                                    <tbody>
+                                        <tr class="o_knowsystem_no_options">
+                                            <th class="bg-gamma knowsystem_v_padding knowsystem_h_padding knowsystem-bordered">
+                                                <h3>Title</h3>
+                                            </th>
+                                        </tr>
+                                        <tr>
+                                            <td class="o_knowsystem_col_mv knowsystem_h_padding knowsystem_v_padding knowsystem-bordered">
+                                                <p class="card-text">Text</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                             <td class="bg-gamma knowsystem_h_padding knowsystem_v_padding knowsystem-bordered">
+                                                <small>Comment</small>
+                                            </td>
+                                        </tr>
+                                        <tr/>
+                                    </tbody>
+                                </table>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </template>
+
+    <template id="knowsystem_alert" name="Alert">
+        <div class="knowsystem_block_alert">
+            <div class="knowsystem_snippet_general">
+                <table align="center" cellspacing="0" cellpadding="0" border="0" class="knowsystem_table_styles">
+                    <tbody>
+                        <tr>
+                            <td width="100%" class="knowsystem_h_padding knowsystem_v_padding o_knowsystem_no_options">
+                                <table cellspacing="0" cellpadding="0" class="knowsystem_table_styles knowsystem-alert bg-epsilon">
+                                    <tbody>
+                                        <tr class="o_knowsystem_no_options">
+                                            <td class="o_knowsystem_col_mv knowsystem_v_padding knowsystem_h_padding knowsystem-alert">
+                                                <span><i class="fa fa-info-circle"> </i></span>
+                                                <span>Message</span>
+                                            </td>
+                                       </tr>
+                                       <tr/>
+                                    </tbody>
+                                </table>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </template>
+
+    <template id="knowsystem_code" name="Code">
+        <div class="knowsystem_block_code">
+            <div class="knowsystem_snippet_general">
+                <table align="center" cellspacing="0" cellpadding="0" border="0" class="knowsystem_table_styles bg-black-75 knowsystem_h_padding knowsystem_v_padding o_knowsystem_no_colorpicker">
+                    <tbody>
+                        <tr>
+                            <td class="o_knowsystem_no_options">
+                               <div class="knowsystem-code">Code line 1</div>
+                            </td>
+                        </tr>
+                        <tr/>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </template>
+
+    <template id="knowsystem_recommendations" name="Recommended">
+        <div class="knowsystem_block_trecommendations">
+            <div class="knowsystem_snippet_general">
+                <table align="center" cellspacing="0" cellpadding="0" border="0" class="knowsystem_table_styles">
+                    <tbody>
+                        <tr>
+                            <td class="knowsystem_h_padding knowsystem_v_padding o_knowsystem_no_options">
+                                <h2 class="knowsystem_no_margin">References</h2>
+                                <p><a role="button" href="#" class="flat flat">reference 1</a></p>
+                                <p><a role="button" href="#" class="flat flat">reference 2</a></p>
+                            </td>
+                        </tr>
+                        <tr/>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </template>
+
+    <template id="knowsystem_separator" name="Separator">
+        <div class="knowsystem_block_footer_separator">
+            <div class="knowsystem_snippet_general">
+                <table align="center" cellspacing="0" cellpadding="0" class="knowsystem_table_styles">
+                    <tbody>
+                        <tr>
+                            <td valign="top" class="knowsystem_v_padding o_knowsystem_no_options">
+                                <div class="separator_big"></div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </template>
+
+    <template id="knowsystem_tag_line" name="Tagline">
+        <div class="knowsystem_block_footer_tag_line o_knowsystem_no_colorpicker">
+            <div class="knowsystem_snippet_general">
+                <table class="knowsystem_table_styles" align="center" cellpadding="0" cellspacing="0">
+                    <tbody>
+                        <tr>
+                            <td class="text-center knowsystem_h_padding knowsystem_v_padding bg-beta">
+                                <h2 class="mt16">Tagline</h2>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="text-center knowsystem_v_padding_small bg-beta">Comments</td>
+                        </tr>
+                        <tr/>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </template>
+
+    <template id="knowsystem_steps" name="Steps">
+        <div class="knowsystem_block_steps">
+            <div class="knowsystem_snippet_general">
+                <table align="center"  cellspacing="0"  cellpadding="0" class="knowsystem_table_styles">
+                    <tbody>
+                        <tr>
+                            <td class="knowsystem_h_padding knowsystem_v_padding bg-gray-lighter">                              
+                                <table align="center">
+                                    <tr>
+                                        <td rowspan="2" class="text-right">
+                                            <span> <i class="fa fa-hand-o-right fa-2x"/> </span>
+                                        </td>
+                                        <td style="padding-left:10px;">
+                                            <p class="knowsystem_no_margin"><small>Step 1:</small></p>
+                                            <h4 class="knowsystem_no_margin">Header 1</h4>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                            <td class="knowsystem_h_padding knowsystem_v_padding bg-gray-lighter">
+                                <table align="center">
+                                    <tr>
+                                        <td rowspan="2" class="text-right">
+                                            &amp;nbsp;<span class="fa fa-hand-o-up fa-2x" role="img"> </span>&amp;nbsp;
+                                        </td>
+                                        <td style="padding-left:10px;">
+                                            <p class="knowsystem_no_margin"><small>Step 2:</small></p>
+                                            <h4 class="knowsystem_no_margin ">Header 2</h4>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                            <td class="knowsystem_h_padding knowsystem_v_padding bg-gray-lighter">
+                                <table align="center">
+                                    <tr>
+                                        <td rowspan="2" class="text-right">
+                                            &amp;nbsp;<span class="fa fa-hand-o-down fa-2x" role="img"> </span>&amp;nbsp;
+                                        </td>
+                                        <td style="padding-left:10px;">
+                                            <p class="knowsystem_no_margin"><small>Step 3:</small></p>
+                                            <h4 class="knowsystem_no_margin ">Header 3</h4>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </template>
+
+    <template id="knowsystem_footer" name="Footer">
+        <div class="knowsystem_block_footer">
+            <div class="knowsystem_snippet_general">
+                <table align="center" cellspacing="0" cellpadding="0" border="0" class="knowsystem_table_styles">
+                    <tbody>
+                        <tr>
+                            <td style="padding-left:24px;" class="o_knowsystem_no_options">
+                                <p class="knowsystem_no_margin"><strong>My Company</strong></p>
+                                <div><p><small><small>2020</small></small></p></div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </template>
+
+    <!-- Images -->
+    <template id="knowsystem_2_columns" name="Two Columns">
+        <div class="knowsystem_two_cols">
+            <div class="knowsystem_snippet_general">
+                <table align="center" cellspacing="0" cellpadding="0" class="knowsystem_table_styles knowsystem_col_table">
+                    <tbody>
+                        <tr>
+                            <td class="o_knowsystem_col_mv knowsystem_col_container">
+                                <div>
+                                    <img style="width:200px;" src="/knowsystem/static/src/img/blocks/no_image.png" class="d-block mx-auto" alt="Your Picture"/>
+                                    <h4 class="text-center">Column 1</h4>
+                                    <p class="text-center knowsystem_no_margin">Text 1</p>
+                                    <div class="text-center mt16"><strong>To highlight</strong></div>
+                                </div>
+                            </td>
+                            <td class="o_knowsystem_col_mv knowsystem_col_container">
+                                <div>
+                                    <img style="width:200px;" src="/knowsystem/static/src/img/blocks/no_image.png" class="d-block mx-auto" alt="Your Picture"/>
+                                    <h4 class="text-center">Column 2</h4>
+                                    <p class="text-center knowsystem_no_margin">Text 2</p>
+                                    <div class="text-center mt16"><strong>To highlight</strong></div>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </template>
+
+    <template id="knowsystem_3_columns" name="Three Columns">
+        <div class="knowsystem_three_cols">
+            <div class="knowsystem_snippet_general">
+                <table align="center" cellspacing="0" cellpadding="0" class="knowsystem_table_styles knowsystem_col_table">
+                    <tbody>
+                        <tr>
+                            <td class="o_knowsystem_col_mv knowsystem_col_container">
+                                <div>
+                                    <img style="width:150px;" src="/knowsystem/static/src/img/blocks/no_image.png" class="d-block mx-auto" alt="Your Picture"/>
+                                    <h4 class="text-center">Column 1</h4>
+                                    <p class="text-center knowsystem_no_margin">Text 1</p>
+                                    <div class="text-center mt16"><strong>To highlight</strong></div>
+                                </div>
+                            </td>
+                            <td class="o_knowsystem_col_mv knowsystem_col_container">
+                                <div>
+                                    <img style="width:150px;" src="/knowsystem/static/src/img/blocks/no_image.png" class="d-block mx-auto" alt="Your Picture"/>
+                                    <h4 class="text-center">Column 2</h4>
+                                    <p class="text-center knowsystem_no_margin">Text 2</p>
+                                    <div class="text-center mt16"><strong>To highlight</strong></div>
+                                </div>
+                            </td>
+                            <td class="o_knowsystem_col_mv knowsystem_col_container">
+                                <div>
+                                    <img style="width:150px;" src="/knowsystem/static/src/img/blocks/no_image.png" class="d-block mx-auto" alt="Your Picture"/>
+                                    <h4 class="text-center">Column 3</h4>
+                                    <p class="text-center knowsystem_no_margin">Text 3</p>
+                                    <div class="text-center mt16"><strong>To highlight</strong></div>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </template>
+
+    <template id="knowsystem_image_text" name="Image + Text">
+        <div class="knowsystem_block_image_text">
+            <div class="knowsystem_snippet_general">
+                <table align="center" cellspacing="0" cellpadding="0" class="knowsystem_table_styles">
+                    <tbody>
+                        <tr>
+                            <td class="o_knowsystem_col_mv knowsystem_img_container knowsystem_h_padding knowsystem_v_padding">
+                                <img style="width:270px;" src="/knowsystem/static/src/img/blocks/no_image.png" class="d-block mx-auto" alt="Your Picture"/>
+                            </td>
+                            <td class="o_knowsystem_col_mv knowsystem_h_padding knowsystem_v_padding vert_mid">
+                                <h3>Title</h3>
+                                <p style="text-align:justify;">Paragraph 1</p>
+                                <p style="text-align:justify;">Paragraph 2</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </template>
+
+    <template id="knowsystem_text_image" name="Text + Image">
+        <div class="knowsystem_block_text_image">
+            <div class="knowsystem_snippet_general">
+                <table align="center" cellspacing="0" cellpadding="0" class="knowsystem_table_styles">
+                    <tbody>
+                        <tr>
+                            <td class="o_knowsystem_col_mv knowsystem_h_padding knowsystem_v_padding vert_mid">
+                                <h3>Title</h3>
+                                <p style="text-align:justify;">Paragraph 1</p>
+                                <p style="text-align:justify;">Paragraph 2</p>
+                            </td>
+                            <td class="o_knowsystem_col_mv knowsystem_img_container knowsystem_h_padding knowsystem_v_padding">
+                                <img src="/knowsystem/static/src/img/blocks/no_image.png" class="d-block mx-auto" style="width:270px;" alt="Your Picture"/>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </template>
+
+    <template id="knowsystem_image" name="Image">
+        <div class="knowsystem_block_image">
+            <div class="knowsystem_snippet_general">
+                <table align="center" cellspacing="0" cellpadding="0" class="knowsystem_table_styles">
+                    <tbody>
+                        <tr>
+                            <td width="100%" align="center" style="text-align:center" class="knowsystem_h_padding">
+                                <img src="/knowsystem/static/src/img/blocks/no_image.png" style="width:400px;" class="d-block mx-auto" alt="Your Picture"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="100%" align="center" style="text-align:center" class="knowsystem_h_padding">
+                                <p class="text-center">Image comment</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </template>
+
+    <template id="knowsystem_image_banner" name="Banner">
+        <div class="knowsystem_block_banner">
+            <div class="knowsystem_snippet_general">
+                <table align="center" cellspacing="0" cellpadding="0" border="0" class="knowsystem_table_styles">
+                    <tbody>
+                        <tr>
+                            <td width="100%" valign="top" class="o_knowsystem_no_options">
+                                <a href="#">
+                                    <img src="/knowsystem/static/src/img/blocks/default_banner.jpg"  class="d-block mx-auto"  alt="Your Image"/>
+                                </a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </template>
+
+</odoo>

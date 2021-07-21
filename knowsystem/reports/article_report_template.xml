@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="report_article_document">
+        <t t-call="web.external_layout">
+            <div class="page">
+                <div class="oe_structure"/>
+                <h1 class="text-center">
+                    <span t-field="doc.name"/>
+                </h1>
+                <div>
+                    <t t-raw="doc.description"/>
+                </div>
+            </div>
+        </t>
+    </template>
+
+    <template id="report_article">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="doc">
+                <t t-call="knowsystem.report_article_document"/>
+            </t>
+        </t>
+    </template>
+
+</odoo>

@@ -1,0 +1,54 @@
+<odoo>
+
+    <template id="assets_backend" name="list asssets" inherit_id="web.assets_backend">
+        <xpath expr="." position="inside">
+            <script type="text/javascript" src="/knowsystem/static/src/js/knowsystem_html_widget.js"/>
+            <script type="text/javascript" src="/knowsystem/static/src/js/kwowsystem_kanbancontroller.js"/>
+            <script type="text/javascript" src="/knowsystem/static/src/js/knowsystem_kanbanmodel.js"/>
+            <script type="text/javascript" src="/knowsystem/static/src/js/knowsystem_kanbanrecord.js"/>
+            <script type="text/javascript" src="/knowsystem/static/src/js/knowsystem_kanbanrender.js"/>
+            <script type="text/javascript" src="/knowsystem/static/src/js/kwowsystem_kanbanview.js"/>
+            <script type="text/javascript" src="/knowsystem/static/src/js/knowsystem_formcontroller.js"/>
+            <script type="text/javascript" src="/knowsystem/static/src/js/knowsystem_formrenderer.js"/>
+            <script type="text/javascript" src="/knowsystem/static/src/js/knowsystem_formview.js"/>
+
+            <script type="text/javascript" src="/knowsystem/static/src/js/many2many_kanban.js"/>
+            <script type="text/javascript" src="/knowsystem/static/src/js/composer_html.js"/>            
+            <script type="text/javascript" src="/knowsystem/static/src/js/components/action_menus.js"/>
+            <script type="text/javascript" src="/knowsystem/static/src/js/systray_knowsystem.js"/>
+    
+            <link type="text/css" rel='stylesheet' href='/knowsystem/static/src/css/styles.css'/>
+        </xpath>
+    </template>
+    <!-- Readonly assets -->
+    <template id="css_html_readonly_assets_know" groups="base.group_user">
+        <link rel="stylesheet" type="text/scss" href="/knowsystem/static/src/css/readonly.css"/>
+    </template>    
+    <!-- Edit assets -->
+    <template id="edit_widget_assets_know" groups="base.group_user">
+        <link rel="stylesheet" type="text/scss" href="/knowsystem/static/src/scss/theme_basic.scss"/>
+        <t t-call="knowsystem.knowsystem_style"/>
+    </template>
+    <template id="edit_widget_assets_web_know" groups="base.group_user">
+        <t t-call="web._assets_helpers"/>
+        <link rel="stylesheet" type="text/scss" href="/web/static/src/scss/webclient.scss"/>
+    </template>
+    <template id="css_html_edit_assets_know" groups="base.group_user">
+        <t t-call-assets="web.assets_common" t-js="false"/>
+        <t t-call-assets="web_editor.assets_wysiwyg" t-js="false"/>
+        <t t-call-assets="knowsystem.edit_widget_assets_know" t-js="false"/>
+        <t t-call-assets="knowsystem.edit_widget_assets_web_know" t-js="false"/>
+    </template>
+    <template id="knowsystem_style">
+        <style>
+            @media screen and (max-width: 768px) {
+                .o_knowsystem_col_mv {
+                    display: block !important;
+                    width: auto !important;
+                }
+                .knowsystem_table_styles {width: 100% !important;}
+                .knowsystem_col_container {margin: 0px 0px 10px 0px !important;}
+            }
+        </style>
+    </template>
+</odoo>
